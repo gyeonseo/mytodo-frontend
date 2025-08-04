@@ -1,0 +1,56 @@
+/* src/components/CalendarGrid.css */
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 8px;
+  font-weight: 600;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calendar-cell {
+  height: 80px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.calendar-cell:hover {
+  box-shadow: 0 0 0 2px #e5e7eb inset;
+}
+
+.calendar-cell__day {
+  align-self: flex-end;
+  font-size: 12px;
+}
+
+.calendar-cell__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-bottom: 6px;
+}
+
+.calendar-cell__status {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.calendar-cell--placeholder {
+  height: 80px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  border: none;
+}

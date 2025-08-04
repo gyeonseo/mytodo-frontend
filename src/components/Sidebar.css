@@ -1,0 +1,27 @@
+.sidebar {
+  width: 150px;
+  background-color: #f0f0f0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.sidebar-bottom {
+  margin-bottom: 20px;
+}
+
+.sidebar button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}

@@ -1,0 +1,49 @@
+/* src/pages/CalendarPage.css */
+.calendar-page {
+  padding: 16px;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.calendar-title {
+  font-weight: 600;
+}
+
+.calendar-controls {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.calendar-controls__month {
+  min-width: 100px;
+  text-align: center;
+}
+
+.calendar-info {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.save-indicator {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+}
+
+.save-indicator--saving {
+  background: #fff7ed;
+  border-color: #fdba74;
+}
+
+.save-indicator--dirty {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+}
