@@ -215,7 +215,7 @@ export default function CalendarPage() {
   if (err)
     return (
       <div className="calendar-page" style={{ color: "crimson" }}>
-        에러: {err}
+        ERROR: {err}
       </div>
     );
 
