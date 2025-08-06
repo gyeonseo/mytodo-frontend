@@ -52,9 +52,14 @@ const InputForm = ({ mode = "create", category = {}, onSuccess, children }) => {
   return (
     <div className="input-form-wrapper">
       <div className="input-form">
-        <InputField label="Name" value={name} onChange={setName} />
-        <InputField label="Color/Image" value={color} onChange={setColor} />
-        <InputField label="Note" value={note} onChange={setNote} />
+        <InputField label="Name" value={name} onChange={setName} type="text" />
+        <InputField
+          label="Color"
+          value={color}
+          onChange={setColor}
+          type="color"
+        />
+        <InputField label="Note" value={note} onChange={setNote} type="text" />
 
         <div className="button-row">
           <button className="save-button" onClick={handleSave}>
@@ -73,13 +78,15 @@ const InputForm = ({ mode = "create", category = {}, onSuccess, children }) => {
   );
 };
 
-const InputField = ({ label, value, onChange }) => (
+// text, color만 지원
+const InputField = ({ label, value, onChange, type = "text" }) => (
   <div className="input-field">
     <label className="input-label">{label}</label>
     <input
-      type="text"
-      className="input-box"
-      placeholder={`Enter ${label}`}
+      type={type}
+      className={
+        type === "color" ? "form-control form-control-color" : "input-box"
+      }
       value={value}
       onChange={(e) => onChange(e.target.value)}
     />
