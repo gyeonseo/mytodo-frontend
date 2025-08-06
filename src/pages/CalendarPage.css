@@ -1,49 +1,76 @@
-/* src/pages/CalendarPage.css */
-.calendar-page {
-  padding: 16px;
-}
-
 .calendar-header {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  position: relative;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev-btn {
+  left: 0;
+}
+.next-btn {
+  right: 0;
 }
 
 .calendar-title {
-  font-weight: 600;
-}
-
-.calendar-controls {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.calendar-controls__month {
-  min-width: 100px;
   text-align: center;
 }
 
-.calendar-info {
-  margin-top: 8px;
-  font-size: 14px;
-  opacity: 0.9;
+.calendar-month {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.calendar-year {
+  font-size: 1rem;
+  color: #666;
+}
+
+.calendar-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+  gap: 8px;
 }
 
 .save-indicator {
-  font-size: 12px;
-  padding: 2px 8px;
-  border-radius: 999px;
-  border: 1px solid #e5e7eb;
+  font-size: 0.9rem;
 }
 
 .save-indicator--saving {
-  background: #fff7ed;
-  border-color: #fdba74;
+  color: orange;
+}
+.save-indicator--dirty {
+  color: red;
 }
 
-.save-indicator--dirty {
-  background: #eef2ff;
-  border-color: #c7d2fe;
+.debug-toggle {
+  margin-left: auto;
+  font-size: 0.85rem;
+}
+
+.edit-btn {
+  font-size: 0.85rem;
+  margin-left: 8px;
+}
+
+.debug-section {
+  margin-top: 12px;
+  padding: 12px;
+  background: #0b1220;
+  color: #c6f6d5;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.85rem;
 }
