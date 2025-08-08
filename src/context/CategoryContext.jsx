@@ -1,4 +1,3 @@
-// CategoryContext.jsx
 import { createContext, useContext, useEffect, useState } from "react";
 import { fetchCategories, fetchCategoryById } from "../apis/category";
 
@@ -31,7 +30,6 @@ export const CategoryProvider = ({ children }) => {
     load();
   }, [refreshKey]);
 
-  // 카테고리 선택
   const selectCategory = async (id) => {
     if (!id) {
       setSelectedCategory(null);
