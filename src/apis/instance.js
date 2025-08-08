@@ -17,4 +17,22 @@ instance.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
+instance.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (
+      error.response &&
+      (error.response.status === 401 || error.response.status === 403)
+    ) {
+      localStorage.removeItem("accessToken");
+    }
+    return Promise.reject(error);
+  }
+);
+
+instance.getCurrentUser = async () => {
+  const response = await instance.get("/users/me");
+  return response.data; // { id, username, ... }
+};
+
 export default instance;
